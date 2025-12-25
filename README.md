@@ -1,8 +1,8 @@
 # DarkArc
 
-**No-bullshit ARChiver**
+**No-bullshit Archiver**
 
-A modern, lightweight archive tool for Windows. No bloat, no ads, no nonsense â€“ just handle your archives and get on with your day.
+A modern, dark and lightweight archive tool for Windows. No bloat, no ads, no nonsense â€“ just handle your archives and get on with your day.
 
 ## Features
 
@@ -39,7 +39,7 @@ A modern, lightweight archive tool for Windows. No bloat, no ads, no nonsense â€
 
 ## Installation
 
-[Get it from the Microsoft Store](https://apps.microsoft.com/store/detail/DarkArc/XXXXXXXXX)
+[![Get it from Microsoft Store](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/detail/9NPDHPT9SS35)
 
 ## Usage
 
@@ -59,12 +59,25 @@ A modern, lightweight archive tool for Windows. No bloat, no ads, no nonsense â€
 
 Settings are stored in `%APPDATA%\DarkArc\settings.json`:
 
+### Extraction
+
 | Setting | Description |
 |---------|-------------|
 | Extract to subfolder | Create a folder with the archive name |
 | Delete after extract | Remove the archive file after successful extraction |
 | Open folder after | Open Explorer to the output location |
 | Close when done | Exit DarkArc after extraction completes |
+| Overwrite existing | Replace files that already exist |
+
+### Compression
+
+| Setting | Description |
+|---------|-------------|
+| Default format | ZIP, 7Z, or TAR |
+| Compression level | Store, Fastest, Fast, Normal, Maximum, or Ultra |
+| Open folder after | Open Explorer after creating archive |
+| Close when done | Exit DarkArc after compression completes |
+| Delete source files | Remove source files after compression |
 
 ## Privacy
 
@@ -82,6 +95,6 @@ Proprietary - All Rights Reserved
 
 ## Credits
 
-** Built with Claude** (Anthropic's Claude Opus 4.5)
+**Built with Claude** (Anthropic's Claude Opus 4.5)
 
 *Built with an emphasis on clean, DRY code and zero tolerance for half-measures.*
