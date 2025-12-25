@@ -22,22 +22,23 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			padding: 2rem;
+			padding: 2rem 1rem;
 		}
 
 		.container {
 			text-align: center;
 			max-width: 600px;
+			width: 100%;
 		}
 
 		.logo {
-			width: 120px;
-			height: 120px;
-			margin-bottom: 1.5rem;
+			width: 100px;
+			height: 100px;
+			margin-bottom: 1rem;
 		}
 
 		h1 {
-			font-size: 3rem;
+			font-size: 2.5rem;
 			background: linear-gradient(135deg, #4f46e5, #7c3aed);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -46,15 +47,16 @@
 		}
 
 		.tagline {
-			font-size: 1.25rem;
+			font-size: 1.1rem;
 			color: #a0a0a0;
-			margin-bottom: 2rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.description {
-			font-size: 1.1rem;
-			line-height: 1.7;
-			margin-bottom: 2rem;
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-bottom: 1.5rem;
+			padding: 0 0.5rem;
 		}
 
 		.buttons {
@@ -62,7 +64,7 @@
 			gap: 1rem;
 			justify-content: center;
 			flex-wrap: wrap;
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
 		}
 
 		.btn {
@@ -99,15 +101,15 @@
 
 		.features {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-			gap: 1rem;
-			margin-bottom: 3rem;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.75rem;
+			margin-bottom: 2rem;
 			text-align: left;
 		}
 
 		.feature {
 			background: rgba(255, 255, 255, 0.05);
-			padding: 1rem;
+			padding: 0.75rem;
 			border-radius: 8px;
 		}
 
@@ -115,31 +117,108 @@
 			color: #a78bfa;
 			font-weight: 600;
 			margin-bottom: 0.25rem;
+			font-size: 0.85rem;
 		}
 
 		.feature-desc {
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 			color: #888;
+		}
+
+		.screenshots {
+			margin-bottom: 2rem;
+		}
+
+		.screenshots h2 {
+			font-size: 1.25rem;
+			color: #a78bfa;
+			margin-bottom: 1rem;
+		}
+
+		.screenshot-gallery {
+			display: flex;
+			gap: 0.75rem;
+			overflow-x: auto;
+			padding: 0.5rem 0;
+			scroll-snap-type: x mandatory;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.screenshot-gallery img {
+			flex-shrink: 0;
+			width: 280px;
+			height: auto;
+			border-radius: 8px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			scroll-snap-align: center;
+			cursor: pointer;
+			transition: transform 0.2s, border-color 0.2s;
+		}
+
+		.screenshot-gallery img:hover {
+			transform: scale(1.02);
+			border-color: rgba(124, 58, 237, 0.5);
+		}
+
+		.lightbox {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.9);
+			z-index: 1000;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+
+		.lightbox.active {
+			display: flex;
+		}
+
+		.lightbox img {
+			max-width: 90%;
+			max-height: 90%;
+			border-radius: 8px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+		}
+
+		.lightbox-close {
+			position: absolute;
+			top: 1rem;
+			right: 1.5rem;
+			color: white;
+			font-size: 2rem;
+			cursor: pointer;
+			opacity: 0.7;
+			transition: opacity 0.2s;
+		}
+
+		.lightbox-close:hover {
+			opacity: 1;
 		}
 
 		.formats {
 			color: #888;
-			font-size: 0.9rem;
-			margin-bottom: 2rem;
+			font-size: 0.85rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.formats code {
 			background: rgba(124, 58, 237, 0.2);
-			padding: 0.2rem 0.4rem;
+			padding: 0.15rem 0.35rem;
 			border-radius: 4px;
 			color: #a78bfa;
+			font-size: 0.8rem;
 		}
 
 		footer {
 			margin-top: auto;
-			padding-top: 2rem;
+			padding-top: 1.5rem;
 			color: #666;
-			font-size: 0.9rem;
+			font-size: 0.85rem;
 		}
 
 		footer a {
@@ -149,6 +228,117 @@
 
 		footer a:hover {
 			text-decoration: underline;
+		}
+
+		/* Mobile styles */
+		@media (max-width: 480px) {
+			body {
+				padding: 1.5rem 0.75rem;
+				justify-content: flex-start;
+			}
+
+			.logo {
+				width: 80px;
+				height: 80px;
+			}
+
+			h1 {
+				font-size: 2rem;
+			}
+
+			.tagline {
+				font-size: 1rem;
+			}
+
+			.description {
+				font-size: 0.9rem;
+			}
+
+			.features {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 0.5rem;
+			}
+
+			.feature {
+				padding: 0.6rem;
+			}
+
+			.feature-title {
+				font-size: 0.8rem;
+			}
+
+			.feature-desc {
+				font-size: 0.75rem;
+			}
+
+			.screenshot-gallery img {
+				width: 240px;
+			}
+
+			.formats code {
+				display: inline-block;
+				margin: 0.1rem;
+			}
+		}
+
+		/* Tablet styles */
+		@media (min-width: 481px) and (max-width: 768px) {
+			.features {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		/* Desktop */
+		@media (min-width: 769px) {
+			.logo {
+				width: 120px;
+				height: 120px;
+				margin-bottom: 1.5rem;
+			}
+
+			h1 {
+				font-size: 3rem;
+			}
+
+			.tagline {
+				font-size: 1.25rem;
+				margin-bottom: 2rem;
+			}
+
+			.description {
+				font-size: 1.1rem;
+				line-height: 1.7;
+				margin-bottom: 2rem;
+			}
+
+			.buttons {
+				margin-bottom: 3rem;
+			}
+
+			.features {
+				gap: 1rem;
+				margin-bottom: 3rem;
+			}
+
+			.feature {
+				padding: 1rem;
+			}
+
+			.feature-title {
+				font-size: 0.9rem;
+			}
+
+			.feature-desc {
+				font-size: 0.85rem;
+			}
+
+			.screenshots {
+				margin-bottom: 3rem;
+			}
+
+			.screenshot-gallery img {
+				width: 320px;
+			}
 		}
 	</style>
 </head>
@@ -166,10 +356,10 @@
 		</svg>
 
 		<h1>DarkArc</h1>
-		<p class="tagline">No-bullshit ARChiver</p>
+		<p class="tagline">No-bullshit Archiver</p>
 
 		<p class="description">
-			A modern, lightweight archive tool for Windows.<br>
+			A modern, dark and lightweight archive tool for Windows.<br>
 			No bloat, no ads, no nonsense – just handle your archives and get on with your day.
 		</p>
 
@@ -186,8 +376,8 @@
 				<div class="feature-desc">ZIP, 7Z, RAR & more</div>
 			</div>
 			<div class="feature">
-				<div class="feature-title">Password Protection</div>
-				<div class="feature-desc">Encrypted headers</div>
+				<div class="feature-title">Clean Design</div>
+				<div class="feature-desc">Dark theme, no popups</div>
 			</div>
 			<div class="feature">
 				<div class="feature-title">Windows 11 Menu</div>
@@ -195,15 +385,37 @@
 			</div>
 			<div class="feature">
 				<div class="feature-title">Drag & Drop</div>
-				<div class="feature-desc">Just drop files in</div>
+				<div class="feature-desc">Drop archives to extract, files to compress</div>
 			</div>
 			<div class="feature">
-				<div class="feature-title">File Browser</div>
-				<div class="feature-desc">Preview before extracting</div>
+				<div class="feature-title">Selective Extract</div>
+				<div class="feature-desc">Select only the files you need</div>
 			</div>
 			<div class="feature">
-				<div class="feature-title">Dark Theme</div>
-				<div class="feature-desc">Easy on the eyes</div>
+				<div class="feature-title">Encryption Support</div>
+				<div class="feature-desc">Open & create protected archives</div>
+			</div>
+			<div class="feature">
+				<div class="feature-title">Compression Levels</div>
+				<div class="feature-desc">From Store to Ultra, you choose</div>
+			</div>
+			<div class="feature">
+				<div class="feature-title">Quick Actions</div>
+				<div class="feature-desc">Right-click, extract, auto-close</div>
+			</div>
+			<div class="feature">
+				<div class="feature-title">20+ Formats</div>
+				<div class="feature-desc">RAR, 7Z, ZIP, TAR, GZ, and more</div>
+			</div>
+		</div>
+
+		<div class="screenshots">
+			<h2>Screenshots</h2>
+			<div class="screenshot-gallery">
+				<img src="img/Main.png" alt="DarkArc main window" loading="lazy">
+				<img src="img/Extract.png" alt="DarkArc extraction view" loading="lazy">
+				<img src="img/Pack.png" alt="DarkArc compression view" loading="lazy">
+				<img src="img/Password.png" alt="DarkArc password prompt" loading="lazy">
 			</div>
 		</div>
 
@@ -216,8 +428,34 @@
 	<footer>
 		<a href="/privacy">Privacy Policy</a> ·
 		<a href="mailto:support@darkarc.app">Support</a> ·
-		Vibe Coded with Claude
+		Built with Claude
 	</footer>
+
+	<div class="lightbox" id="lightbox">
+		<span class="lightbox-close">&times;</span>
+		<img src="" alt="Screenshot">
+	</div>
+
+	<script>
+		const lightbox = document.getElementById('lightbox');
+		const lightboxImg = lightbox.querySelector('img');
+
+		document.querySelectorAll('.screenshot-gallery img').forEach(img => {
+			img.addEventListener('click', () => {
+				lightboxImg.src = img.src;
+				lightboxImg.alt = img.alt;
+				lightbox.classList.add('active');
+			});
+		});
+
+		lightbox.addEventListener('click', () => {
+			lightbox.classList.remove('active');
+		});
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') lightbox.classList.remove('active');
+		});
+	</script>
 </body>
 
 </html>

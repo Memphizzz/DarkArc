@@ -82,6 +82,6 @@ Proprietary - All Rights Reserved
 
 ## Credits
 
-**Vibe Coded with Claude** (Anthropic's Claude Opus 4.5)
+** Built with Claude** (Anthropic's Claude Opus 4.5)
 
 *Built with an emphasis on clean, DRY code and zero tolerance for half-measures.*
