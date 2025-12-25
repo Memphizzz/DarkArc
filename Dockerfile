@@ -4,6 +4,7 @@ FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/
 COPY privacy.html /usr/share/nginx/html/
 COPY README.md /usr/share/nginx/html/
+COPY img/ /usr/share/nginx/html/img/
 
 # Custom nginx config for SPA-style routing
 RUN echo 'server { \
