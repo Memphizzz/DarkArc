@@ -2,18 +2,31 @@
 
 **No-bullshit ARChiver**
 
-A modern, lightweight archive extractor for Windows. No bloat, no ads, no nonsense – just extract your files and get on with your day.
+A modern, lightweight archive tool for Windows. No bloat, no ads, no nonsense – just handle your archives and get on with your day.
 
 ## Features
 
-- **Dark mode only** – Easy on the eyes, no blinding white screens
-- **File browser** – Navigate archive contents like a file explorer
-- **Selective extraction** – Pick exactly which files/folders you need
-- **Tri-state selection** – Folder checkboxes show partial selection state
-- **Conflict detection** – Know before you overwrite
-- **Shell integration** – Right-click → "Extract with DarkArc"
-- **DPI aware** – Crisp at any display scale
-- **Single window** – No modal dialogs, no popups, just one clean interface
+### Extract & Compress
+- Create ZIP, 7Z, and TAR archives from files and folders
+- Extract 20+ formats including RAR, 7Z, ZIP, TAR, and more
+- Password protection with encrypted headers
+- Adjustable compression levels (Store to Ultra)
+
+### Smart Extraction
+- Browse archive contents before extracting
+- Select exactly which files/folders you need
+- Conflict detection – know before you overwrite
+
+### Windows 11 Integration
+- Native context menu: Extract Here, Extract to folder, Add to .7z, Add to .zip
+- Quick actions launch directly and close automatically
+- File type associations for all supported formats
+
+### Clean Design
+- Dark theme interface
+- Borderless compact window
+- Drag and drop files directly onto the window
+- Single window – no modal dialogs, no popups
 
 ## Supported Formats
 
@@ -30,11 +43,17 @@ A modern, lightweight archive extractor for Windows. No bloat, no ads, no nonsen
 
 ## Usage
 
-1. **Open an archive** – Click "Browse" or use the context menu
-2. **Browse contents** – Double-click folders to navigate, use the up arrow to go back
-3. **Select files** – Check/uncheck files and folders (folders toggle all contents)
-4. **Configure** – Choose output location, create subfolder, etc.
-5. **Extract** – Click "Extract All" or "Extract Selected"
+### Extracting
+1. **Open an archive** – Drag & drop, click "Browse", or right-click in Explorer
+2. **Browse contents** – Navigate folders, check/uncheck files
+3. **Configure** – Choose output location, handle conflicts
+4. **Extract** – Click "Extract All" or "Extract Selected"
+
+### Compressing
+1. **Add files** – Drag & drop files/folders or right-click in Explorer
+2. **Choose format** – ZIP, 7Z, or TAR
+3. **Set options** – Compression level, password protection
+4. **Compress** – Creates the archive in the same location
 
 ## Settings
 
@@ -63,8 +82,6 @@ Proprietary - All Rights Reserved
 
 ## Credits
 
-**Vibe Coded by Claude** (Anthropic's Claude Opus 4.5)
-
-This project was developed through conversational pair programming with AI. The human provided the vision, direction, and exacting quality standards – Claude handled the implementation.
+**Vibe Coded with Claude** (Anthropic's Claude Opus 4.5)
 
 *Built with an emphasis on clean, DRY code and zero tolerance for half-measures.*
